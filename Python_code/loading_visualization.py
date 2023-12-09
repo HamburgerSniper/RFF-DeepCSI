@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -67,7 +66,7 @@ if __name__ == '__main__':
             name_time_vect = input_dir_time + name_file
             time_vector = sio.loadmat(name_time_vect)
             time_vector = np.concatenate((time_vector['time_vector'])[0, :])
-            time_vector = time_vector/1E6
+            time_vector = time_vector / 1E6
             time_vector = time_vector - time_vector[0]
 
             # TIME VECTOR

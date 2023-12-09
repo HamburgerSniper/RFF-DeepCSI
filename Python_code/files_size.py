@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -18,7 +17,6 @@ import argparse
 import os
 import numpy as np
 from dataset_utility import load_numpy
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -46,9 +44,9 @@ if __name__ == '__main__':
             labels.append(mod_label)
 
     num_IDs = len(module_IDs)
-    files_size = np.nan*np.zeros((num_IDs, num_pos))
-    num_samples = np.nan*np.zeros((num_IDs, num_pos), dtype=int)
-    idxs = np.arange(0, num_pos*num_IDs, num_pos)
+    files_size = np.nan * np.zeros((num_IDs, num_pos))
+    num_samples = np.nan * np.zeros((num_IDs, num_pos), dtype=int)
+    idxs = np.arange(0, num_pos * num_IDs, num_pos)
     for ID in range(num_IDs):
         mod_id = module_IDs[ID]
         for pos in range(num_pos):

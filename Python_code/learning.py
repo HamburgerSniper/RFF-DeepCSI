@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -21,7 +20,6 @@ import shutil
 from network_utility import *
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)

@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -58,7 +57,7 @@ if __name__ == '__main__':
                     selected_idxs = np.random.randint(0, num_sampl, max_num_samples)
                     selected_idxs = np.sort(selected_idxs)
                 elif args.rand == 'sampling':
-                    selected_idxs = np.arange(0, num_sampl, mt.ceil(num_sampl/max_num_samples))
+                    selected_idxs = np.arange(0, num_sampl, mt.ceil(num_sampl / max_num_samples))
                 v_matrix = v_matrix[selected_idxs, ...]
 
             name_file = save_folder + args.receiver + '/' + name_file + '.txt'

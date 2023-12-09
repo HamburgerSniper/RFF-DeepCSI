@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -26,7 +25,6 @@ mpl.rcParams['text.usetex'] = 'true'
 mpl.rcParams['text.latex.preamble'] = [r'\usepackage{newtxmath}']
 mpl.rcParams['font.size'] = 22
 mpl.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Accent.colors)
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -67,7 +65,7 @@ if __name__ == '__main__':
         accuracy_20.append(metrics_dict['accuracy_test'])
 
         name_40 = args.model_name + 'IDrecs[\'57\']_TX[0, 1, 2]_RX[0]_' \
-                  'posTRAIN' + str(pos_train) + '_posTEST' \
+                                    'posTRAIN' + str(pos_train) + '_posTEST' \
                   + str(pos_test) + '_bandwidth40_MOD' + args.model_type
         name_file = './outputs/' + name_40 + '.txt'
         with open(name_file, "rb") as fp:
@@ -75,7 +73,7 @@ if __name__ == '__main__':
         accuracy_40.append(metrics_dict['accuracy_test'])
 
         name_80 = args.model_name + 'IDrecs[\'57\']_TX[0, 1, 2]_RX[0]_' \
-                  'posTRAIN' + str(pos_train) + '_posTEST' \
+                                    'posTRAIN' + str(pos_train) + '_posTEST' \
                   + str(pos_test) + '_bandwidth80_MOD' + args.model_type
         name_file = './outputs/' + name_80 + '.txt'
         with open(name_file, "rb") as fp:
@@ -105,5 +103,3 @@ if __name__ == '__main__':
     plt.close()
 
     a = 1
-
-

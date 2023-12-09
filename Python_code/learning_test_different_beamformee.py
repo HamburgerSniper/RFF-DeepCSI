@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -20,7 +19,6 @@ import os
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 from network_utility import *
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -197,5 +195,6 @@ if __name__ == '__main__':
     string_latex = ''
     for row in range(len(module_IDs)):
         for col in range(len(module_IDs)):
-            string_latex = string_latex + '(' + str(row) + ',' + str(col) + ') [' + str(conf_matrix_test[row, col]) + '] '
+            string_latex = string_latex + '(' + str(row) + ',' + str(col) + ') [' + str(
+                conf_matrix_test[row, col]) + '] '
         string_latex = string_latex + '\n\n'

@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -64,7 +63,7 @@ def load_real_imag(name_f, start_fraction, end_fraction, M, tx_antennas_list, N,
     v_mat_stack_imag = np.imag(v_mat_stack)
 
     # remove imaginary part of last tx antenna as it is always 0
-    if M-1 in tx_antennas_list:
+    if M - 1 in tx_antennas_list:
         v_mat_stack_imag = v_mat_stack_imag[..., :-1]
 
     v_mat_stack = np.concatenate([v_mat_stack_real, v_mat_stack_imag], axis=3)

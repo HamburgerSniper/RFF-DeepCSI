@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -26,7 +25,6 @@ mpl.rcParams['text.latex.preamble'] = [r'\usepackage{newtxmath}']
 mpl.rcParams['font.size'] = 26
 mpl.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Accent.colors)
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('receiver', help='Receiver id')
@@ -50,9 +48,9 @@ if __name__ == '__main__':
     for mod_idx in range(len(models_params)):
         model_n_params = models_params[mod_idx]
         model_n = './outputs/' + args.model_name + model_n_params + '_IDrecs[\'57\']_TX[0, 1, 2]_RX[0]_' \
-                  'posTRAIN[1, 2, 3, 4, 5, 6, 7, 8, 9]_' \
-                  'posTEST[1, 2, 3, 4, 5, 6, 7, 8, 9]_bandwidth80_' \
-                  'MOD' + args.model_type + '_hyper_selection-' + model_n_params + '.txt'
+                                                                    'posTRAIN[1, 2, 3, 4, 5, 6, 7, 8, 9]_' \
+                                                                    'posTEST[1, 2, 3, 4, 5, 6, 7, 8, 9]_bandwidth80_' \
+                                                                    'MOD' + args.model_type + '_hyper_selection-' + model_n_params + '.txt'
 
         with open(model_n, "rb") as fp:
             metrics_dict = pickle.load(fp)
@@ -94,9 +92,9 @@ if __name__ == '__main__':
     for mod_idx in range(len(models_params)):
         model_n_params = models_params[mod_idx]
         model_n = './outputs/' + args.model_name + model_n_params + '_IDrecs[\'57\']_TX[0, 1, 2]_RX[0]_' \
-                  'posTRAIN[1, 2, 3, 4, 5, 6, 7, 8, 9]_' \
-                  'posTEST[1, 2, 3, 4, 5, 6, 7, 8, 9]_bandwidth80_' \
-                  'MOD' + args.model_type + '_hyper_selection-' + model_n_params + '.txt'
+                                                                    'posTRAIN[1, 2, 3, 4, 5, 6, 7, 8, 9]_' \
+                                                                    'posTEST[1, 2, 3, 4, 5, 6, 7, 8, 9]_bandwidth80_' \
+                                                                    'MOD' + args.model_type + '_hyper_selection-' + model_n_params + '.txt'
 
         with open(model_n, "rb") as fp:
             metrics_dict = pickle.load(fp)

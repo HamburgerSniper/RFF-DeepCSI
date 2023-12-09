@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -26,14 +25,12 @@ import pickle
 import h5py
 import matplotlib.gridspec as gridspec
 
-
 mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.serif'] = 'Palatino'
 mpl.rcParams['text.usetex'] = 'true'
 mpl.rcParams['text.latex.preamble'] = [r'\usepackage{newtxmath}']
 mpl.rcParams['font.size'] = 18
 mpl.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Set3.colors)
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -100,11 +97,11 @@ if __name__ == '__main__':
                 arg = params[:-2]
                 loc = params[-2]
                 scale = params[-1]
-                pdf_fitted = dist.pdf(edges, loc=loc, scale=scale, *arg)/div_factor
+                pdf_fitted = dist.pdf(edges, loc=loc, scale=scale, *arg) / div_factor
                 # plt.hist(error_average_subcarriers[ant_n, :, stream_n],
                 #          label=labels[stream_n*3+ant_n], bins=edges, density=True)
                 plt.plot(edges, pdf_fitted, linewidth=1, color='k', linestyle='--')
-                plt.fill_between(edges, pdf_fitted, label=labels[stream_n*3+ant_n], linestyle='--', linewidth=1,
+                plt.fill_between(edges, pdf_fitted, label=labels[stream_n * 3 + ant_n], linestyle='--', linewidth=1,
                                  edgecolor='k')
 
         if psi_bit == 5:

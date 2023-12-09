@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -50,21 +49,20 @@ class ConvNormalization(tf.keras.layers.Layer):
     def get_config(self):
         config = super().get_config().copy()
         config.update({
-             'filters': self.filters,
-             'kernel_size': self.kernel_size,
-             'strides': self.strides,
-             'padding': self.padding,
-             'activation': self.activation,
-             'kernel_initializer': self.kernel_initializer,
-             'bias_initializer': self.bias_initializer,
-             'bn': self.bn,
-             'name_layer': self.name_layer
+            'filters': self.filters,
+            'kernel_size': self.kernel_size,
+            'strides': self.strides,
+            'padding': self.padding,
+            'activation': self.activation,
+            'kernel_initializer': self.kernel_initializer,
+            'bias_initializer': self.bias_initializer,
+            'bn': self.bn,
+            'name_layer': self.name_layer
         })
         return config
 
 
 def conv_network(input_sh, num_classes, base_name):
-
     x_in = tf.keras.Input(input_sh)
 
     x = ConvNormalization(64, (1, 7), name_layer=base_name + '_conv1')(x_in)
@@ -95,7 +93,6 @@ def conv_network(input_sh, num_classes, base_name):
 
 
 def conv_network_hyper_selection(input_sh, num_classes, filters_dimension, kernels_dimension, base_name):
-
     x_in = tf.keras.Input(input_sh)
 
     num_filters = len(filters_dimension)
@@ -166,7 +163,6 @@ def att_network(input_sh, num_classes):
 
 
 def att_network_hyper_selection(input_sh, num_classes, filters_dimension, kernels_dimension, base_name):
-
     x_in = tf.keras.Input(input_sh)
 
     num_filters = len(filters_dimension)

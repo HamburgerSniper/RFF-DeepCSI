@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -26,7 +25,6 @@ mpl.rcParams['text.usetex'] = 'true'
 mpl.rcParams['text.latex.preamble'] = [r'\usepackage{newtxmath}']
 mpl.rcParams['font.size'] = 16
 mpl.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Accent.colors)
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -61,7 +59,7 @@ if __name__ == '__main__':
         pos_train_set = pos_train_val_complete[idx_set]
         pos_test = pos_test_complete[idx_set]
         for num_pos_train in range(len(pos_train_set)):
-            pos_train = pos_train_set[:num_pos_train+1]
+            pos_train = pos_train_set[:num_pos_train + 1]
             name_0 = args.model_name + 'IDrecs[\'57\']_TX[0, 1, 2]_RX[0]_posTRAIN' + str(pos_train) + '_posTEST' \
                      + str(pos_test) + '_bandwidth80_MOD' + args.model_type
             name_file = './outputs/' + name_0 + '.txt'

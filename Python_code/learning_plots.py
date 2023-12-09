@@ -1,4 +1,3 @@
-
 """
     Copyright (C) 2022 Francesca Meneghello
     contact: meneghello@dei.unipd.it
@@ -17,7 +16,6 @@
 import argparse
 from dataset_utility import *
 from plots_utility import *
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
