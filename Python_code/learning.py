@@ -14,12 +14,14 @@
 """
 
 import argparse
-from dataset_utility import *
 import os
 import shutil
-from network_utility import *
+
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
+
+from dataset_utility import *
+from network_utility import *
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)

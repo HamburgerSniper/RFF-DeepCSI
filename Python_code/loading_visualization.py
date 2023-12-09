@@ -14,11 +14,13 @@
 """
 
 import argparse
+
+import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io as sio
-from dataset_utility import load_real_imag
-import matplotlib.pyplot as plt
 from matplotlib import rcParams
+
+from dataset_utility import load_real_imag
 
 rcParams['font.family'] = 'serif'
 rcParams['font.serif'] = 'Times'

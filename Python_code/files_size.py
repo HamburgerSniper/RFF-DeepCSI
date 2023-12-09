@@ -15,7 +15,9 @@
 
 import argparse
 import os
+
 import numpy as np
+
 from dataset_utility import load_numpy
 
 if __name__ == '__main__':

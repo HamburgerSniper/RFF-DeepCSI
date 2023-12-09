@@ -14,10 +14,12 @@
 """
 
 import argparse
-from dataset_utility import *
 import os
+
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
+
+from dataset_utility import *
 from network_utility import *
 
 if __name__ == '__main__':

@@ -14,10 +14,12 @@
 """
 
 import argparse
-import pickle
-from dataset_utility import load_numpy
-import numpy as np
 import math as mt
+import pickle
+
+import numpy as np
+
+from dataset_utility import load_numpy
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)

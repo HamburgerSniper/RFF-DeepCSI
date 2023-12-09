@@ -14,16 +14,15 @@
 """
 
 import argparse
-import numpy as np
-from dataset_utility import load_numpy
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import scipy.io as sio
-import scipy.stats as st
-import matplotlib as mpl
-import pickle
+
 import h5py
+import matplotlib as mpl
 import matplotlib.gridspec as gridspec
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy.stats as st
+
+from dataset_utility import load_numpy
 
 mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.serif'] = 'Palatino'

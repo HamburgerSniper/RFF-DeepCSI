@@ -14,10 +14,11 @@
 """
 
 import argparse
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 import pickle
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 
 mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.serif'] = 'Palatino'

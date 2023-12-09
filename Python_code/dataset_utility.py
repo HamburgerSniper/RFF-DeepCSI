@@ -13,10 +13,11 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import tensorflow as tf
-import scipy.io as sio
-import numpy as np
 import pickle
+
+import numpy as np
+import scipy.io as sio
+import tensorflow as tf
 
 
 def load_numpy(name_f, start_fraction, end_fraction, selected_subcarriers_idxs=None):
